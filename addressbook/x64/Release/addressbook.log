@@ -1,0 +1,26 @@
+﻿  main.cpp
+  StringChanger.cpp
+d:\github\031702646\addressbook\src\stringchanger.cpp(32): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+d:\github\031702646\addressbook\src\stringchanger.cpp(46): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+  test.cpp
+  Triecpp.cpp
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/LTCG”规范)
+Relase_json_vc71_libmt.lib(json_writer.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+Relase_json_vc71_libmt.lib(json_value.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+Relase_json_vc71_libmt.lib(json_reader.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(locale0.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(ios.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(iosptrs.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(locale.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(xlock.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(wlocale.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(xlocale.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(xdateord.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(winapisupp.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(StlCompareStringA.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(winapinls.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(StlCompareStringW.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(StlLCMapStringW.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+libcpmt.lib(StlLCMapStringA.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MT_StaticRelease”不匹配值“MD_DynamicRelease”(main.obj 中)
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+D:\GitHub\031702646\x64\Release\addressbook.exe : fatal error LNK1319: 检测到 17 个不匹配项
