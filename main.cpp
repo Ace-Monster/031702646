@@ -47,12 +47,12 @@ int main(int argv, char* argc[]) {
 		person.getPhone(wts);
 		person.getCity(trie, StringChanger().WstringToString(wts));
 		if (op == 3) person.fixAdress(trie, NULL, 3);
+		tmp["姓名"] = person.name;
+		tmp["手机"] = person.phone;
 		for (int i = 0;i < 4;i++) {
 			if (person.adress[i] == "直辖市") person.adress[i].clear();
 			tmp["地址"].append(person.adress[i]);
 		}
-		tmp["姓名"] = person.name;
-		tmp["电话"] = person.phone;
 		if (op == 1) {
 			tmp["地址"].append(person.adress[4]);
 		}
@@ -62,14 +62,14 @@ int main(int argv, char* argc[]) {
 			for (int i = 4;i < 7;i++)
 				tmp["地址"].append(person.adress[i]);
 		}
-		res["answer"].append(tmp);
+		res.append(tmp);
 	}
 	is.close();
 	ofstream ous;
 	ous.open(outfile);
 	ous.imbue(locale(is.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
 	Json::FastWriter writer;
-	ous << '[' << writer.write(res) << ']' << endl;
+	ous << writer.write(res) << endl;
 	cout << "ok" << CNT << endl;
 	ous.close();
 	return 0;
