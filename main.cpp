@@ -13,6 +13,7 @@ const int maxn = 500;
 char s[maxn];
 Trie trie;
 string GET_JSON_ADDRESS() {
+	//return "a.json";
 	TCHAR exeFullPath[MAX_PATH];
 	memset(exeFullPath, 0, MAX_PATH);
 	GetModuleFileName(NULL, exeFullPath, MAX_PATH);
@@ -65,11 +66,11 @@ int main(int argv, char* argc[]) {
 		res.append(tmp);
 	}
 	is.close();
-	ofstream ous;
+	wofstream ous;
 	ous.open(outfile);
 	ous.imbue(locale(ous.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
 	Json::FastWriter writer;
-	ous << writer.write(res) << endl;
+	ous << StringChanger().StringToWstring(writer.write(res)) << endl;
 	cout << "ok" << CNT << endl;
 	ous.close();
 	return 0;
