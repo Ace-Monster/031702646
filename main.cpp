@@ -18,8 +18,8 @@ Trie trie;
  */
 int main(int argv, char* argc[]) {
 	string infile = "1.txt", outfile = "2.txt";
-	//if (argv < 3) return 0;
-	//infile = argc[1], outfile = argc[2];
+	if (argv < 3) return 0;
+	infile = argc[1], outfile = argc[2];
 	cout << "正在初始化字典树" << endl;
 	if (trie.init()) cout << "字典树生成成功" << endl;
 	else cout << "生成失败" << endl;
