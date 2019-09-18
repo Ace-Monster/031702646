@@ -67,7 +67,7 @@ int main(int argv, char* argc[]) {
 	is.close();
 	ofstream ous;
 	ous.open(outfile);
-	ous.imbue(locale(is.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
+	ous.imbue(locale(ous.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
 	Json::FastWriter writer;
 	ous << writer.write(res) << endl;
 	cout << "ok" << CNT << endl;
