@@ -149,18 +149,20 @@ bool fixAdress(Person& person, trie_node *ptr, int rank) {
 	}
 	return false;
 }
+string infile = "1.txt", outfile = "2.txt";
 /*
  * init()进行字典树初始化，会消耗较大的时间(大约7s)，并非死循环
  */
-int main() {
+int main(int argv, char* argc[]) {
+	if (argv < 3) return 0;
+	infile = argc[1], outfile = argc[2];
 	cout << "正在初始化字典树" << endl;
 	init();
 	cout << "runing" << endl;
 	//time_t be = time(NULL);
 	fstream is;
-	is.open("1.txt");
+	is.open(infile);
 	Json::Value res;
-	string adr = "00";
 	cout.imbue(locale("chs"));
 	wcout.imbue(locale("chs"));
 	int CNT = 0;
@@ -208,7 +210,7 @@ int main() {
 	}
 	//time_t en = time(NULL);
 	is.close();
-	is.open("2.txt");
+	is.open(outfile);
 	is.imbue(locale(is.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
 	Json::FastWriter writer;
 	is << writer.write(res) << endl;
