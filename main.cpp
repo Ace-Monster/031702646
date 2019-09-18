@@ -36,7 +36,7 @@ inline void init_getProvice(Json::Value& provice) {
 		init_getCity(p, provice["cities"][i]);
 	}
 }
-inline void init() {
+inline bool init() {
 	load = StringChanger().StringToWstring("区道路街巷里弄胡同");
 	fstream is;
 	is.open("a.json");
@@ -49,13 +49,13 @@ inline void init() {
 	//cout << json[0] << endl;
 	Json::Reader reader;
 	Json::Value root;
-	if (!reader.parse(json, root)) return;
+	if (!reader.parse(json, root)) return false;
 	//cout << "OK" << endl;
 	int sz = root["provinces"].size();
 	for (int i = 0;i < sz;i++) {
 		init_getProvice(root["provinces"][i]);
 	}
-	return;
+	return true;
 }
 
 //分离名字
@@ -149,15 +149,16 @@ bool fixAdress(Person& person, trie_node *ptr, int rank) {
 	}
 	return false;
 }
-string infile = "1.txt", outfile = "2.txt";
+string infile = "in.txt", outfile = "2.txt";
 /*
  * init()进行字典树初始化，会消耗较大的时间(大约7s)，并非死循环
  */
 int main(int argv, char* argc[]) {
-	if (argv < 3) return 0;
-	infile = argc[1], outfile = argc[2];
+	//if (argv < 3) return 0;
+	//infile = argc[1], outfile = argc[2];
 	cout << "正在初始化字典树" << endl;
-	init();
+	if (init()) cout << "字典树生成成功" << endl;
+	else cout << "生成失败" << endl;
 	cout << "runing" << endl;
 	//time_t be = time(NULL);
 	fstream is;
