@@ -69,7 +69,7 @@ int main(int argv, char* argc[]) {
 	ous.open(outfile);
 	ous.imbue(locale(is.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
 	Json::FastWriter writer;
-	ous << writer.write(res) << endl;
+	ous << '[' << writer.write(res) << ']' << endl;
 	cout << "ok" << CNT << endl;
 	ous.close();
 	return 0;
