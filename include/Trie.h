@@ -24,7 +24,7 @@ public:
 	trie_node *insert(trie_node *fa, string str, int rank);
 	void seach(vector<string> &adr, string &str);
 	trie_node* getPtr(string& s, int rank);
-	bool init();
+	bool init(string file);
 private:
 	void init_getCounty(trie_node *fa, Json::Value& county);
 	void init_getCity(trie_node *fa, Json::Value& city);

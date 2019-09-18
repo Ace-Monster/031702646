@@ -12,16 +12,21 @@ using namespace std;
 const int maxn = 500;
 char s[maxn];
 Trie trie;
-
+string GET_JSON_ADDRESS() {
+	TCHAR exeFullPath[MAX_PATH];
+	memset(exeFullPath, 0, MAX_PATH);
+	GetModuleFileName(NULL, exeFullPath, MAX_PATH);
+	return string(exeFullPath).substr(0, strlen(exeFullPath) - 15) + "a.json";
+}
 /*
  * trieinit()进行字典树初始化，会消耗较大的时间(大约7s)，并非死循环
  */
 int main(int argv, char* argc[]) {
 	string infile = "1.txt", outfile = "2.txt";
-	if (argv < 3) return 0;
-	infile = argc[1], outfile = argc[2];
+	//if (argv < 3) return 0;
+	//infile = argc[1], outfile = argc[2];
 	cout << "正在初始化字典树" << endl;
-	if (trie.init()) cout << "字典树生成成功" << endl;
+	if (trie.init(GET_JSON_ADDRESS())) cout << "字典树生成成功" << endl;
 	else cout << "生成失败" << endl;
 	cout << "runing" << endl;
 	fstream is;
