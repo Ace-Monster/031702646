@@ -156,7 +156,7 @@ int main() {
 	cout << "正在初始化字典树" << endl;
 	init();
 	cout << "runing" << endl;
-	time_t be = time(NULL);
+	//time_t be = time(NULL);
 	fstream is;
 	is.open("1.txt");
 	Json::Value res;
@@ -164,7 +164,7 @@ int main() {
 	cout.imbue(locale("chs"));
 	wcout.imbue(locale("chs"));
 	int CNT = 0;
-	time_t hs = 0;
+	//time_t hs = 0;
 	while (is >> s) {
 		CNT++;
 		Person person;
@@ -172,14 +172,12 @@ int main() {
 		char *p = s;
 		while (*p < '1' || *p > '3') p++;
 		int op = *p - '0';
-		
 		wstring wts = StringChanger().Utf8ToWstring(p+2);
-		
 		getName(person, wts);
 		getPhone(person, wts);
-		time_t tmphs = time(NULL);
+		//time_t tmphs = time(NULL);
 		trie.seach(person, StringChanger().WstringToString(wts));
-		hs += (time(NULL) * 100000 - tmphs * 100000);
+		//hs += (time(NULL) * 100000 - tmphs * 100000);
 		for (int i = 0;i < 4;i++) {
 			string tspr = spr[i] + "市";
 			if (person.adress[0] == spr[i] || person.adress[1] == tspr) {
@@ -189,8 +187,6 @@ int main() {
 		}
 		//cout << person.name << " " << person.phone << endl;
 		if (op == 3) fixAdress(person, NULL, 3);
-		
-		/*
 		for (int i = 0;i < 4;i++) {
 			if (person.adress[i] == "直辖市") person.adress[i].clear();
 			tmp["地址"].append(person.adress[i]);
@@ -207,10 +203,10 @@ int main() {
 				tmp["地址"].append(person.adress[i]);
 		}
 		res["answer"].append(tmp);
-		*/
+		
 		//if (CNT % 100 == 0) cout << CNT << endl;
 	}
-	time_t en = time(NULL);
+	//time_t en = time(NULL);
 	is.close();
 	is.open("2.txt");
 	is.imbue(locale(is.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
@@ -218,7 +214,7 @@ int main() {
 	is << writer.write(res) << endl;
 	cout << "ok" << CNT << endl;
 	is.close();
-	cout << "函数耗时：" << hs << endl;
-	cout << "开始时间：" <<be << endl << "结束时间：" << en << endl << "耗时：" << en - be << endl;
+	//cout << "函数耗时：" << hs << endl;
+	//cout << "开始时间：" <<be << endl << "结束时间：" << en << endl << "耗时：" << en - be << endl;
 	return 0;
 }
