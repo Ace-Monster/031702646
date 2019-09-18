@@ -210,12 +210,13 @@ int main(int argv, char* argc[]) {
 	}
 	//time_t en = time(NULL);
 	is.close();
-	is.open(outfile);
-	is.imbue(locale(is.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
+	ofstream ous;
+	ous.open(outfile);
+	ous.imbue(locale(is.getloc(), new codecvt_utf8<wchar_t, 0x10ffff, little_endian>));
 	Json::FastWriter writer;
-	is << writer.write(res) << endl;
+	ous << writer.write(res) << endl;
 	cout << "ok" << CNT << endl;
-	is.close();
+	ous.close();
 	//cout << "函数耗时：" << hs << endl;
 	//cout << "开始时间：" <<be << endl << "结束时间：" << en << endl << "耗时：" << en - be << endl;
 	return 0;
