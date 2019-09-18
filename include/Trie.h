@@ -5,7 +5,7 @@
 #include<map>
 #include<vector>
 #include<set>
-#include"Person.h"
+#include"json\json.h"
 using namespace std;
 
 struct trie_node {
@@ -22,6 +22,11 @@ public:
 	Trie();
 	trie_node *insert(string str, int rank);
 	trie_node *insert(trie_node *fa, string str, int rank);
-	void seach(Person &person, string str);
+	void seach(vector<string> &adr, string &str);
 	trie_node* getPtr(string& s, int rank);
+	bool init();
+private:
+	void init_getCounty(trie_node *fa, Json::Value& county);
+	void init_getCity(trie_node *fa, Json::Value& city);
+	void init_getProvice(Json::Value& provice);
 };
