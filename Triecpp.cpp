@@ -113,6 +113,7 @@ void Trie::init_getProvice(Json::Value& provice) {
 const int maxn = 5000000;
 char json_s[maxn];
 bool Trie::init(string file) {
+	cout << file << endl;
 	fstream is;
 	is.open(file);
 	is >> json_s;

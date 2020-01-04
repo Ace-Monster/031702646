@@ -33,10 +33,28 @@ void Person::getPhone(wstring &wts) {
 void Person::getCity(Trie &trie, string str) {
 	vector<string> adr;
 	adr.resize(10);
+	string linecity[2] = { str.substr(0, 4), str.substr(0, 6) };
+	for (int i = 0;i < 4;i++) {
+		string tspr = spr[i] + "ÊÐ";
+		if (linecity[1] == tspr) {
+			adress[0] = spr[i];
+			adress[1] = tspr;
+			str = str.erase(0, 6);
+			break;
+		}
+		if (linecity[0] == spr[i]) {
+			adress[0] = spr[i];
+			adress[1] = tspr;
+			str = str.erase(0, 4);
+			break;
+		}
+	}
 	trie.seach(adr, str);
-	for (int i = 0;i < 5;i++)
-		adress[i] = adr[i];
-	checkCity();
+	for (int i = 0;i < 5;i++) {
+		if (adress[i].empty())
+			adress[i] = adr[i];
+	}
+	//checkCity();
 }
 
 bool Person::isNum(wchar_t t) {

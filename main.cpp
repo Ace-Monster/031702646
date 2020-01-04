@@ -7,7 +7,6 @@
 #include"Trie.h"
 #include<fstream>
 #include <codecvt>
-#include<time.h>
 using namespace std;
 const int maxn = 500;
 char s[maxn];
@@ -17,15 +16,16 @@ string GET_JSON_ADDRESS() {
 	TCHAR exeFullPath[MAX_PATH];
 	memset(exeFullPath, 0, MAX_PATH);
 	GetModuleFileName(NULL, exeFullPath, MAX_PATH);
-	return string(exeFullPath).substr(0, strlen(exeFullPath) - 15) + "a.json";
+	// IF RELEASE
+	return string(exeFullPath).substr(0, strlen(exeFullPath) - 27) + "resource\\address.json";
+	// IF DEBUG
+	//return string(exeFullPath).substr(0, strlen(exeFullPath) - 25) + "resource\\address.json";
 }
 /*
  * trieinit()进行字典树初始化，会消耗较大的时间(大约7s)，并非死循环
  */
 int main(int argv, char* argc[]) {
-	string infile = "1.txt", outfile = "2.txt";
-	if (argv < 3) return 0;
-	infile = argc[1], outfile = argc[2];
+	string infile = "resource\\in.txt", outfile = "resource\\out.json";
 	cout << "正在初始化字典树" << endl;
 	if (trie.init(GET_JSON_ADDRESS())) cout << "字典树生成成功" << endl;
 	else cout << "生成失败" << endl;

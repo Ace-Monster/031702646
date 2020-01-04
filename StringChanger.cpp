@@ -43,6 +43,7 @@ string StringChanger::Utf8ToGbk(const char *s) {
 }
 
 wstring StringChanger::StringToWstring(const string& s) {
+	
 	unsigned len = s.size() * 2;
 	setlocale(LC_CTYPE, ""); 
 	wchar_t *p = new wchar_t[len];
@@ -50,4 +51,5 @@ wstring StringChanger::StringToWstring(const string& s) {
 	std::wstring str1(p);
 	delete[] p;
 	return str1;
+	
 }

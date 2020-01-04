@@ -1,0 +1,21 @@
+[2019-09-20 23:19:19] [info] Start Program:
+Path:"D:\GitHub\031702646\x64\Release\addressbook.exe"
+Arguments:
+Working directory: "D:\GitHub\031702646\"
+Modules: Selected: D:\GitHub\031702646\x64\Release\addressbook.exe Excluded: 
+Sources: Selected: D:\GitHub\031702646 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 1
+Export: Binary C:\Users\mr.dou\AppData\Local\Temp\ig5kqn0e.bpm 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2019-09-20 23:19:19] [info] Module: D:\GitHub\031702646\x64\Release\addressbook.exe is selected because it matches selected pattern: D:\GitHub\031702646\x64\Release\addressbook.exe
+[2019-09-20 23:19:37] [info] ----------------------------------------------------
+[2019-09-20 23:19:37] [info] Coverage binary generated in file: C:\Users\mr.dou\AppData\Local\Temp\ig5kqn0e.bpm
+[2019-09-20 23:19:37] [info] ----------------------------------------------------

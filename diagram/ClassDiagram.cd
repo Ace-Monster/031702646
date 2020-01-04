@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StringChanger">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACAAAAAAAAAECAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>include\StringChanger.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trie">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACDAAAAAAAAgAAAAAAAABAIABAAAAQQAAAA=</HashCode>
+      <FileName>include\Trie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Person">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAkAAAAgAAAAAAAAAAABAAAAEQAAoAQAEIAAAAAA=</HashCode>
+      <FileName>include\Person.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="trie_node">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABACAAAAAAAAAAAEAAAAEAAAAAAA=</HashCode>
+      <FileName>include\Trie.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
